@@ -7,7 +7,7 @@ const CardItem = ({ src, title, tags, published }) => {
     month: "short",
     day: "numeric"
   };
-  // console.log(new Date(published).toLocaleDateString("en-US", options));
+
   const publishedDate = new Date(published).toLocaleDateString(
     "en-US",
     options

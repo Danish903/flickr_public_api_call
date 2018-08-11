@@ -1,6 +1,5 @@
 import React from "react";
 const Navbar = ({ onChange, handleSubmit, tags }) => {
-  console.log(tags);
   return (
     <header className="header">
       <img src="/assets/flickr.svg" alt="flickr" className="logo" />
