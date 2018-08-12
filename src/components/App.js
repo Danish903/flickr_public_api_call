@@ -10,19 +10,23 @@ const actions = {
 };
 
 class App extends Component {
+  
   state = {
     tags: ""
   };
+
   componentDidMount() {
     this.props.getData();
   }
+
   handleChange = e => {
     const { name, value } = e.target;
     this.setState({
       [name]: value
     });
   };
-  handleSubmit = async e => {
+
+  handleSubmit = e => {
     e.preventDefault();
     const { tags } = this.state;
     this.props.getData(tags);
@@ -30,6 +34,7 @@ class App extends Component {
       tags: ""
     });
   };
+
   render() {
     const { tags } = this.state;
     const { data, loading, errorMsg } = this.props;
